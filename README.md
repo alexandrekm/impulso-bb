@@ -6,6 +6,7 @@ My custom [bb](https://getbb.app) plugins. Each plugin lives in `plugins/<name>`
 | --- | --- |
 | [worktree-hooks](plugins/worktree-hooks) | Worktree environment that runs per-project scripts before and after the worktree is created, before the agent starts |
 | [umbrella-repos](plugins/umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
+| [delegate](plugins/delegate) | Hand a task or prompt template (e.g. create-pr) to a visible child thread on a small/medium/big model tier via `bb delegate` |
 
 ## Install via marketplace
 

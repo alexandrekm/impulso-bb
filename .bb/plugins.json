@@ -4,6 +4,7 @@
   "name": "impulso-bb",
   "plugins": [
     { "name": "worktree-hooks", "source": "./plugins/worktree-hooks" },
-    { "name": "umbrella-repos", "source": "./plugins/umbrella-repos" }
+    { "name": "umbrella-repos", "source": "./plugins/umbrella-repos" },
+    { "name": "delegate", "source": "./plugins/delegate" }
   ]
 }
