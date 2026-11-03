@@ -19,6 +19,11 @@
       "release-type": "node",
       "component": "delegate",
       "package-name": "bb-plugin-delegate"
+    },
+    "plugins/impulso-settings": {
+      "release-type": "node",
+      "component": "impulso-settings",
+      "package-name": "bb-plugin-impulso-settings"
     }
   }
 }
