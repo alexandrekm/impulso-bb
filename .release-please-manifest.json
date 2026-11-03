@@ -1,5 +1,6 @@
 {
   "plugins/worktree-hooks": "0.1.0",
   "plugins/umbrella-repos": "0.3.0",
-  "plugins/delegate": "0.1.0"
+  "plugins/delegate": "0.1.0",
+  "plugins/impulso-settings": "0.1.0"
 }
