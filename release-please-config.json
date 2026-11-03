@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "include-component-in-tag": true,
+  "tag-separator": "/",
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": false,
+  "packages": {
+    "plugins/worktree-hooks": {
+      "release-type": "node",
+      "component": "worktree-hooks",
+      "package-name": "bb-plugin-worktree-hooks"
+    },
+    "plugins/umbrella-repos": {
+      "release-type": "node",
+      "component": "umbrella-repos",
+      "package-name": "bb-plugin-umbrella-repos"
+    }
+  }
+}

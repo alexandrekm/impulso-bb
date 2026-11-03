@@ -23,7 +23,8 @@
         "git": {
           "url": "https://github.com/alexandrekm/impulso-bb.git",
           "subdir": "plugins/worktree-hooks",
-          "ref": "main"
+          "range": "^0.1.0",
+          "tagPrefix": "worktree-hooks/"
         }
       }
     },
@@ -45,7 +46,8 @@
         "git": {
           "url": "https://github.com/alexandrekm/impulso-bb.git",
           "subdir": "plugins/umbrella-repos",
-          "ref": "main"
+          "range": "^0.2.0",
+          "tagPrefix": "umbrella-repos/"
         }
       }
     },
