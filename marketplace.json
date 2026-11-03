@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "name": "impulso-bb",
   "displayName": "Impulso BB",
-  "description": "Personal bb plugins by alexandrekm.",
+  "description": "bb plugins by alexandrekm, installed from npm.",
   "plugins": [
     {
       "id": "worktree-hooks",
@@ -16,15 +16,13 @@
         "git"
       ],
       "author": {
-        "name": "Alexandre Mendon\u00e7a",
+        "name": "Alexandre Mendonça",
         "github": "alexandrekm"
       },
       "source": {
-        "git": {
-          "url": "https://github.com/alexandrekm/impulso-bb.git",
-          "subdir": "plugins/worktree-hooks",
-          "range": "^0.1.0",
-          "tagPrefix": "worktree-hooks/"
+        "npm": {
+          "package": "bb-plugin-worktree-hooks",
+          "range": "^0.1.0"
         }
       }
     },
@@ -39,59 +37,13 @@
         "multi-repo"
       ],
       "author": {
-        "name": "Alexandre Mendon\u00e7a",
-        "github": "alexandrekm"
-      },
-      "source": {
-        "git": {
-          "url": "https://github.com/alexandrekm/impulso-bb.git",
-          "subdir": "plugins/umbrella-repos",
-          "range": "^0.3.0",
-          "tagPrefix": "umbrella-repos/"
-        }
-      }
-    },
-    {
-      "id": "delegate",
-      "displayName": "Delegate",
-      "description": "Hand a task to a visible child thread on a cheaper model tier (small, medium or big) through the bb CLI.",
-      "icon": "GitBranch",
-      "tags": [
-        "delegate",
-        "subagents",
-        "models"
-      ],
-      "author": {
-        "name": "Alexandre Mendon\u00e7a",
-        "github": "alexandrekm"
-      },
-      "source": {
-        "git": {
-          "url": "https://github.com/alexandrekm/impulso-bb.git",
-          "subdir": "plugins/delegate",
-          "ref": "main"
-        }
-      }
-    },
-    {
-      "id": "impulso-settings",
-      "displayName": "Impulso Settings",
-      "description": "Toggle impulso-pi features, packages, pi settings and model tiers from bb, using the installed impulso-pi catalog.",
-      "icon": "SlidersHorizontal",
-      "tags": [
-        "settings",
-        "pi",
-        "impulso"
-      ],
-      "author": {
         "name": "Alexandre Mendonça",
         "github": "alexandrekm"
       },
       "source": {
-        "git": {
-          "url": "https://github.com/alexandrekm/impulso-bb.git",
-          "subdir": "plugins/impulso-settings",
-          "ref": "main"
+        "npm": {
+          "package": "bb-plugin-umbrella-repos",
+          "range": "^0.3.0"
         }
       }
     }

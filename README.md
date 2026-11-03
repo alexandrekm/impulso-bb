@@ -1,52 +1,28 @@
 # impulso-bb
 
-My custom [bb](https://getbb.app) plugins. Each plugin lives in `plugins/<name>` and is a standalone package.
+A [bb](https://getbb.app) plugin marketplace. It holds only `marketplace.json`: every entry is an npm package, and bb installs from npm.
 
-| Plugin | Description |
-| --- | --- |
-| [worktree-hooks](plugins/worktree-hooks) | Worktree environment that runs per-project scripts before and after the worktree is created, before the agent starts |
-| [umbrella-repos](plugins/umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
-| [delegate](plugins/delegate) | Hand a task or prompt template (e.g. create-pr) to a visible child thread on a small/medium/big model tier via `bb delegate` |
-| [impulso-settings](plugins/impulso-settings) | Settings page for impulso-pi features and pi settings, driven by the installed impulso-pi catalog |
+| Plugin | npm | Description |
+| --- | --- | --- |
+| worktree-hooks | [`bb-plugin-worktree-hooks`](https://www.npmjs.com/package/bb-plugin-worktree-hooks) | Worktree environment that runs per-project scripts before and after the worktree is created, before the agent starts |
+| umbrella-repos | [`bb-plugin-umbrella-repos`](https://www.npmjs.com/package/bb-plugin-umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
 
-## Install via marketplace
-
-The repo is a bb plugin marketplace (`marketplace.json`). It must be public (or git must authenticate over HTTPS) because bb fetches plugin code from GitHub.
+## Install
 
 ```sh
-bb marketplace add git:https://github.com/alexandrekm/impulso-bb.git@main   # or Settings -> Plugin marketplaces
+bb marketplace add git:github.com/alexandrekm/impulso-bb@main   # or Settings -> Plugin marketplaces
 bb plugin install worktree-hooks@impulso-bb
 bb plugin outdated && bb plugin update
 ```
 
-Entries track release tags (`<plugin>/vX.Y.Z`) through semver ranges, so a release reaches users without a catalog change.
-When a plugin leaves its range (e.g. 0.2 -> 0.3 while < 1.0), bump `range` in `marketplace.json`.
-`delegate` and `impulso-settings` have no release yet and track `main`; switch them to a range once they are tagged.
+Entries use semver ranges, so a new npm release reaches users without a catalog change.
+While a plugin is below 1.0, a minor bump (0.3 -> 0.4) leaves its range: bump `range` here when that happens.
 
-For local development, install from the checkout instead: `bb plugin install path:/path/to/impulso-bb --plugin <name>` then `bb plugin reload <name>`.
+## Where the code lives
 
-## Releasing (automatic)
-
-Releases are automated per plugin with [release-please](https://github.com/googleapis/release-please).
-Use Conventional Commits and touch only the plugin you mean to release:
-
-| Commit type | Bump (while < 1.0) |
-| --- | --- |
-| `feat` | minor (0.1.0 -> 0.2.0) |
-| `fix`, `perf` | patch (0.1.0 -> 0.1.1) |
-| breaking (`feat!`, `BREAKING CHANGE:`) | minor (major after 1.0) |
-| `docs`, `build`, `ci`, `test`, `refactor`, `style` | no release |
-
-On every push to `main`, release-please keeps a release PR open per plugin that bumps `package.json` and `CHANGELOG.md`.
-Merging it creates the tag `<plugin>/vX.Y.Z` and a GitHub release, which `bb plugin update` picks up. Never move a published tag.
-
-To add a plugin: create `plugins/<name>`, list it in `marketplace.json`, `.bb/plugins.json`, `release-please-config.json`
-and `.release-please-manifest.json`.
-
-## Local development
+The plugin source moved to a private repo, where it is built with `bb plugin build` and published to npm.
+The history up to the move stays here (the last commit with `plugins/` is 9043270), and the old `<plugin>/vX.Y.Z` tags still resolve, so existing git installs keep working until you switch them:
 
 ```sh
-cd plugins/<name>
-npm install --include=dev
-bb plugin install .   # then: bb plugin dev
+bb plugin install worktree-hooks@impulso-bb   # after removing the git install
 ```
