@@ -3,6 +3,7 @@
   "schemaVersion": 1,
   "name": "impulso-bb",
   "plugins": [
-    { "name": "worktree-hooks", "source": "./plugins/worktree-hooks" }
+    { "name": "worktree-hooks", "source": "./plugins/worktree-hooks" },
+    { "name": "umbrella-repos", "source": "./plugins/umbrella-repos" }
   ]
 }
