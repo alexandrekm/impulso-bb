@@ -7,22 +7,22 @@ My custom [bb](https://getbb.app) plugins. Each plugin lives in `plugins/<name>`
 | [worktree-hooks](plugins/worktree-hooks) | Worktree environment that runs per-project scripts before and after the worktree is created, before the agent starts |
 | [umbrella-repos](plugins/umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
 
-## Install from GitHub
+## Install via marketplace
 
-The repo is a plugin collection (`.bb/plugins.json`). It is private, so git must be able to authenticate over HTTPS (`gh auth setup-git`).
+The repo is a bb plugin marketplace (`marketplace.json`). It is private, so git must authenticate over HTTPS (`gh auth setup-git`).
 
 ```sh
-# Always latest main (rolling)
-bb plugin install git:https://github.com/alexandrekm/impulso-bb.git@main --plugin worktree-hooks
-
-# Semver: newest 0.x release
-bb plugin install git:https://github.com/alexandrekm/impulso-bb.git@^0.1.0 --plugin worktree-hooks --tag-prefix worktree-hooks/
-
-# Pin exactly (tag or commit)
-bb plugin install git:https://github.com/alexandrekm/impulso-bb.git@worktree-hooks/v0.1.0 --plugin worktree-hooks
+bb marketplace add git:https://github.com/alexandrekm/impulso-bb.git@main
+bb plugin search worktree   # entries from impulso-bb
+bb plugin install worktree-hooks@impulso-bb
+bb plugin outdated && bb plugin update
 ```
 
-Then `bb plugin outdated` and `bb plugin update` pull new commits (branch) or releases (semver range).
+Entries track release tags (`<plugin>/vX.Y.Z`) through semver ranges, so a release reaches users without a catalog change.
+`delegate` has no release yet and tracks `main`; switch it to a range once it is tagged.
+When a plugin leaves its range (e.g. 0.2 -> 0.3), bump `range` in `marketplace.json`.
+
+Direct install still works: `bb plugin install git:https://github.com/alexandrekm/impulso-bb.git@main --plugin <name>`.
 
 ## Releasing (automatic)
 
@@ -41,7 +41,7 @@ updates `CHANGELOG.md`, and lists the commits. Merging it creates the tag `<plug
 which `bb plugin update` picks up for semver installs. Commits are attributed to a plugin by file path, so
 changes under `plugins/<name>/` only release that plugin.
 
-To add a plugin: create `plugins/<name>`, list it in `.bb/plugins.json`, `release-please-config.json`
+To add a plugin: create `plugins/<name>`, list it in `marketplace.json`, `.bb/plugins.json`, `release-please-config.json`
 and `.release-please-manifest.json`. Never move a published tag.
 
 ## Local development
