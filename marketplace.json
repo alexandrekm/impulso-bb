@@ -72,6 +72,28 @@
           "ref": "main"
         }
       }
+    },
+    {
+      "id": "impulso-settings",
+      "displayName": "Impulso Settings",
+      "description": "Toggle impulso-pi features, packages, pi settings and model tiers from bb, using the installed impulso-pi catalog.",
+      "icon": "SlidersHorizontal",
+      "tags": [
+        "settings",
+        "pi",
+        "impulso"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/alexandrekm/impulso-bb.git",
+          "subdir": "plugins/impulso-settings",
+          "ref": "main"
+        }
+      }
     }
   ]
 }

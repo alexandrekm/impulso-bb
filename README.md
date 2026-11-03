@@ -7,6 +7,7 @@ My custom [bb](https://getbb.app) plugins. Each plugin lives in `plugins/<name>`
 | [worktree-hooks](plugins/worktree-hooks) | Worktree environment that runs per-project scripts before and after the worktree is created, before the agent starts |
 | [umbrella-repos](plugins/umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
 | [delegate](plugins/delegate) | Hand a task or prompt template (e.g. create-pr) to a visible child thread on a small/medium/big model tier via `bb delegate` |
+| [impulso-settings](plugins/impulso-settings) | Settings page for impulso-pi features and pi settings, driven by the installed impulso-pi catalog |
 
 ## Install via marketplace
 
@@ -20,7 +21,7 @@ bb plugin outdated && bb plugin update
 
 Entries track release tags (`<plugin>/vX.Y.Z`) through semver ranges, so a release reaches users without a catalog change.
 When a plugin leaves its range (e.g. 0.2 -> 0.3 while < 1.0), bump `range` in `marketplace.json`.
-`delegate` has no release yet and tracks `main`; switch it to a range once it is tagged.
+`delegate` and `impulso-settings` have no release yet and track `main`; switch them to a range once they are tagged.
 
 For local development, install from the checkout instead: `bb plugin install path:/path/to/impulso-bb --plugin <name>` then `bb plugin reload <name>`.
 
