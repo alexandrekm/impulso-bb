@@ -1,0 +1,77 @@
+{
+  "$schema": "https://getbb.app/schemas/marketplace.schema.json",
+  "schemaVersion": 1,
+  "name": "impulso-bb",
+  "displayName": "Impulso BB",
+  "description": "Personal bb plugins by alexandrekm.",
+  "plugins": [
+    {
+      "id": "worktree-hooks",
+      "displayName": "Worktree Hooks",
+      "description": "Run per-project scripts before and after a thread's git worktree is created, before the agent starts.",
+      "icon": "FolderGit",
+      "tags": [
+        "worktree",
+        "hooks",
+        "git"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/alexandrekm/impulso-bb.git",
+          "subdir": "plugins/worktree-hooks",
+          "range": "^0.1.0",
+          "tagPrefix": "worktree-hooks/"
+        }
+      }
+    },
+    {
+      "id": "umbrella-repos",
+      "displayName": "Umbrella Repos",
+      "description": "See git status, diffs and GitHub pull requests for every repo inside a multi-repo (umbrella) folder.",
+      "icon": "FolderGit",
+      "tags": [
+        "git",
+        "pull-requests",
+        "multi-repo"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/alexandrekm/impulso-bb.git",
+          "subdir": "plugins/umbrella-repos",
+          "range": "^0.2.0",
+          "tagPrefix": "umbrella-repos/"
+        }
+      }
+    },
+    {
+      "id": "delegate",
+      "displayName": "Delegate",
+      "description": "Hand a task to a visible child thread on a cheaper model tier (small, medium or big) through the bb CLI.",
+      "icon": "GitBranch",
+      "tags": [
+        "delegate",
+        "subagents",
+        "models"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/alexandrekm/impulso-bb.git",
+          "subdir": "plugins/delegate",
+          "ref": "main"
+        }
+      }
+    }
+  ]
+}
