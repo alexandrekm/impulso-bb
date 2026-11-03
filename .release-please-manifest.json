@@ -1,3 +1,4 @@
 {
-  "plugins/worktree-hooks": "0.1.0"
+  "plugins/worktree-hooks": "0.1.0",
+  "plugins/umbrella-repos": "0.1.0"
 }

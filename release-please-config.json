@@ -9,6 +9,11 @@
       "release-type": "node",
       "component": "worktree-hooks",
       "package-name": "bb-plugin-worktree-hooks"
+    },
+    "plugins/umbrella-repos": {
+      "release-type": "node",
+      "component": "umbrella-repos",
+      "package-name": "bb-plugin-umbrella-repos"
     }
   }
 }
