@@ -5,6 +5,7 @@
   "plugins": [
     { "name": "worktree-hooks", "source": "./plugins/worktree-hooks" },
     { "name": "umbrella-repos", "source": "./plugins/umbrella-repos" },
-    { "name": "delegate", "source": "./plugins/delegate" }
+    { "name": "delegate", "source": "./plugins/delegate" },
+    { "name": "impulso-settings", "source": "./plugins/impulso-settings" }
   ]
 }
