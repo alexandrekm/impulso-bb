@@ -1,0 +1,8 @@
+{
+  "$schema": "https://getbb.app/schemas/plugins.schema.json",
+  "schemaVersion": 1,
+  "name": "impulso-bb",
+  "plugins": [
+    { "name": "worktree-hooks", "source": "./plugins/worktree-hooks" }
+  ]
+}
