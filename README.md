@@ -23,25 +23,10 @@ so the repo being private needs `gh auth setup-git` or `git config --global url.
 
 Direct install from the checkout also works: `bb plugin install path:/path/to/impulso-bb --plugin <name>`.
 
-## Releasing (automatic)
+## Adding a plugin
 
-Releases are automated per plugin with [release-please](https://github.com/googleapis/release-please).
-Use Conventional Commits and touch only the plugin you mean to release:
-
-| Commit type | Bump (while < 1.0) |
-| --- | --- |
-| `feat` | minor (0.1.0 -> 0.2.0) |
-| `fix`, `perf` | patch (0.1.0 -> 0.1.1) |
-| breaking (`feat!`, `BREAKING CHANGE:`) | minor (major after 1.0) |
-| `docs`, `build`, `ci`, `test`, `refactor`, `style` | no release |
-
-On every push to `main`, release-please keeps a "release" PR open per plugin that bumps `package.json`,
-updates `CHANGELOG.md`, and lists the commits. Merging it creates the tag `<plugin>/vX.Y.Z` and a GitHub release,
-which `bb plugin update` picks up for semver installs. Commits are attributed to a plugin by file path, so
-changes under `plugins/<name>/` only release that plugin.
-
-To add a plugin: create `plugins/<name>`, list it in `marketplace.json`, `.bb/plugins.json`, `release-please-config.json`
-and `.release-please-manifest.json`. Never move a published tag.
+Create `plugins/<name>`, then list it in `marketplace.json` (entry with `"ref": "main"`) and `.bb/plugins.json`.
+There is no release process: `main` is the release.
 
 ## Local development
 
