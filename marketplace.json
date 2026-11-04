@@ -46,6 +46,27 @@
           "range": "^0.3.0"
         }
       }
+    },
+    {
+      "id": "impulso-stats",
+      "displayName": "Impulso Stats",
+      "description": "Overall Pi usage, model and project breakdowns, and per-thread session statistics.",
+      "icon": "ChartNoAxesCombined",
+      "tags": [
+        "stats",
+        "usage",
+        "pi"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "npm": {
+          "package": "bb-plugin-impulso-stats",
+          "range": "^0.2.0"
+        }
+      }
     }
   ]
 }
