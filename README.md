@@ -1,12 +1,13 @@
 # impulso-bb
 
-A [bb](https://getbb.app) plugin marketplace. It holds only `marketplace.json`: every entry is an npm package, and bb installs from npm.
+A [bb](https://getbb.app) plugin marketplace. It holds only `marketplace.json`. Our own plugins are npm packages. Reviewed third-party plugins are git entries pinned to an exact commit, so an upstream change reaches users only after a catalog update.
 
-| Plugin | npm | Description |
+| Plugin | Source | Description |
 | --- | --- | --- |
 | worktree-hooks | [`bb-plugin-worktree-hooks`](https://www.npmjs.com/package/bb-plugin-worktree-hooks) | Worktree environment that runs per-project scripts before and after the worktree is created, before the agent starts |
 | impulso-stats | [`bb-plugin-impulso-stats`](https://www.npmjs.com/package/bb-plugin-impulso-stats) | Pi usage summaries, session totals, and the complete Impulso dashboard inside bb |
 | umbrella-repos | [`bb-plugin-umbrella-repos`](https://www.npmjs.com/package/bb-plugin-umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
+| tok-speed | git [`patleeman/bb-plugins`](https://github.com/patleeman/bb-plugins/tree/main/packages/bb-plugin-tok-speed) @ `d8edb69` (third-party) | Visible provider-output tok/s in each assistant message's hover menu |
 
 ## Install
 
