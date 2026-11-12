@@ -111,6 +111,27 @@
       }
     },
     {
+      "id": "cache-guard",
+      "displayName": "Cache Guard",
+      "description": "Offers to compact a thread whose prompt cache has expired before the next message re-sends cold context; for models that report no cache TTL (OpenAI-style, cpa, litellm).",
+      "icon": "TimerReset",
+      "tags": [
+        "prompt-cache",
+        "compaction",
+        "cost"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "npm": {
+          "package": "bb-plugin-cache-guard",
+          "range": "^0.2.0"
+        }
+      }
+    },
+    {
       "id": "tok-speed",
       "displayName": "Tok Speed",
       "description": "Shows the visible provider-output tokens-per-second for each assistant message in its hover menu.",
