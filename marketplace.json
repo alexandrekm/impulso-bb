@@ -69,6 +69,48 @@
       }
     },
     {
+      "id": "plan-pin",
+      "displayName": "Plan",
+      "description": "The agent's plan and the thread's source Jira or GitHub issue in two lines above the composer; click for the full step list. Needs impulso-pi's prompt rules.",
+      "icon": "ListChecks",
+      "tags": [
+        "plan",
+        "jira",
+        "pi"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "npm": {
+          "package": "bb-plugin-plan-pin",
+          "range": "^0.4.0"
+        }
+      }
+    },
+    {
+      "id": "side-cards",
+      "displayName": "Side Cards",
+      "description": "A Cards tab with each thread's live commands and tool calls, plus an optional Iris card of the last turn drawn by pi's smallModel (off by default).",
+      "icon": "PanelRight",
+      "tags": [
+        "iris",
+        "activity",
+        "pi"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "npm": {
+          "package": "bb-plugin-side-cards",
+          "range": "^0.2.0"
+        }
+      }
+    },
+    {
       "id": "tok-speed",
       "displayName": "Tok Speed",
       "description": "Shows the visible provider-output tokens-per-second for each assistant message in its hover menu.",

@@ -6,6 +6,8 @@ A [bb](https://getbb.app) plugin marketplace. It holds only `marketplace.json`. 
 | --- | --- | --- |
 | worktree-hooks | [`bb-plugin-worktree-hooks`](https://www.npmjs.com/package/bb-plugin-worktree-hooks) | Worktree environment that runs per-project scripts before and after the worktree is created, before the agent starts |
 | impulso-stats | [`bb-plugin-impulso-stats`](https://www.npmjs.com/package/bb-plugin-impulso-stats) | Pi usage summaries, session totals, and the complete Impulso dashboard inside bb |
+| plan-pin | [`bb-plugin-plan-pin`](https://www.npmjs.com/package/bb-plugin-plan-pin) | The agent's plan and the thread's source issue in two lines above the composer (needs impulso-pi's prompt rules) |
+| side-cards | [`bb-plugin-side-cards`](https://www.npmjs.com/package/bb-plugin-side-cards) | Cards tab with live thread activity, plus an opt-in Iris card of the last turn drawn by pi's smallModel |
 | umbrella-repos | [`bb-plugin-umbrella-repos`](https://www.npmjs.com/package/bb-plugin-umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
 | tok-speed | git [`patleeman/bb-plugins`](https://github.com/patleeman/bb-plugins/tree/main/packages/bb-plugin-tok-speed) @ `d8edb69` (third-party) | Visible provider-output tok/s in each assistant message's hover menu |
 
