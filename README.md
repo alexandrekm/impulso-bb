@@ -10,7 +10,6 @@ A [bb](https://getbb.app) plugin marketplace. It holds only `marketplace.json`. 
 | side-cards | [`bb-plugin-side-cards`](https://www.npmjs.com/package/bb-plugin-side-cards) | Cards tab with live thread activity, plus an opt-in Iris card of the last turn drawn by pi's smallModel |
 | cache-guard | [`bb-plugin-cache-guard`](https://www.npmjs.com/package/bb-plugin-cache-guard) | Offers a compaction when a thread's prompt cache has expired, for models that report no cache TTL; messages queued for the grace period are sent anyway |
 | umbrella-repos | [`bb-plugin-umbrella-repos`](https://www.npmjs.com/package/bb-plugin-umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
-| tok-speed | git [`patleeman/bb-plugins`](https://github.com/patleeman/bb-plugins/tree/main/packages/bb-plugin-tok-speed) @ `d8edb69` (third-party) | Visible provider-output tok/s in each assistant message's hover menu |
 
 ## Install
 
