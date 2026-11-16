@@ -130,28 +130,6 @@
           "range": "^0.2.0"
         }
       }
-    },
-    {
-      "id": "tok-speed",
-      "displayName": "Tok Speed",
-      "description": "Shows the visible provider-output tokens-per-second for each assistant message in its hover menu.",
-      "icon": "Gauge",
-      "tags": [
-        "tokens",
-        "speed",
-        "performance"
-      ],
-      "author": {
-        "name": "Patrick Lee",
-        "github": "patleeman"
-      },
-      "source": {
-        "git": {
-          "url": "https://github.com/patleeman/bb-plugins.git",
-          "subdir": "packages/bb-plugin-tok-speed",
-          "ref": "d8edb695e07e665d0ee02e7449818d4309852cff"
-        }
-      }
     }
   ]
 }
