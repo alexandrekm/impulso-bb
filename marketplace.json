@@ -146,9 +146,9 @@
         "github": "KaviiSuri"
       },
       "source": {
-        "git": {
-          "url": "https://github.com/alexandrekm/bb-plugin-goal.git",
-          "ref": "ee5c775d52434c09dd04e64578434e07c5c0c58b"
+        "npm": {
+          "package": "bb-plugin-goal",
+          "range": "^0.1.3"
         }
       }
     }
