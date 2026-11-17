@@ -10,7 +10,7 @@ A [bb](https://getbb.app) plugin marketplace. It holds only `marketplace.json`. 
 | side-cards | [`bb-plugin-side-cards`](https://www.npmjs.com/package/bb-plugin-side-cards) | Cards tab with live thread activity, plus an opt-in Iris card of the last turn drawn by pi's smallModel |
 | cache-guard | [`bb-plugin-cache-guard`](https://www.npmjs.com/package/bb-plugin-cache-guard) | Offers a compaction when a thread's prompt cache has expired, for models that report no cache TTL; messages queued for the grace period are sent anyway |
 | umbrella-repos | [`bb-plugin-umbrella-repos`](https://www.npmjs.com/package/bb-plugin-umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
-| goal | git [`alexandrekm/bb-plugin-goal`](https://github.com/alexandrekm/bb-plugin-goal) @ `f647146` (fork of [`KaviiSuri/bb-plugin-goal`](https://github.com/KaviiSuri/bb-plugin-goal) v0.1.1, patched for plugin SDK 0.6) | Durable thread objective that re-prompts the agent when idle until it reports completion with evidence or a repeated blocker |
+| goal | git [`alexandrekm/bb-plugin-goal`](https://github.com/alexandrekm/bb-plugin-goal) @ `ee5c775` (v0.1.2, fork of [`KaviiSuri/bb-plugin-goal`](https://github.com/KaviiSuri/bb-plugin-goal) v0.1.1 patched for plugin SDK 0.6) | Durable thread objective that re-prompts the agent when idle until it reports completion with evidence or a repeated blocker |
 
 ## Install
 
