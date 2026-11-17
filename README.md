@@ -10,6 +10,7 @@ A [bb](https://getbb.app) plugin marketplace. It holds only `marketplace.json`. 
 | side-cards | [`bb-plugin-side-cards`](https://www.npmjs.com/package/bb-plugin-side-cards) | Cards tab with live thread activity, plus an opt-in Iris card of the last turn drawn by pi's smallModel |
 | cache-guard | [`bb-plugin-cache-guard`](https://www.npmjs.com/package/bb-plugin-cache-guard) | Offers a compaction when a thread's prompt cache has expired, for models that report no cache TTL; messages queued for the grace period are sent anyway |
 | umbrella-repos | [`bb-plugin-umbrella-repos`](https://www.npmjs.com/package/bb-plugin-umbrella-repos) | Repos tab with per-repo git status, diffs and GitHub PRs for multi-repo (umbrella) workspaces |
+| goal | git [`KaviiSuri/bb-plugin-goal`](https://github.com/KaviiSuri/bb-plugin-goal) @ `229f79e` (v0.1.1, third-party) | Durable thread objective that re-prompts the agent when idle until it reports completion with evidence or a repeated blocker |
 
 ## Install
 
@@ -19,7 +20,7 @@ bb plugin install worktree-hooks@impulso-bb
 bb plugin outdated && bb plugin update
 ```
 
-Entries use semver ranges, so a new npm release reaches users without a catalog change.
+npm entries use semver ranges, so a new npm release reaches users without a catalog change. Git entries move only when their pinned commit is bumped here.
 While a plugin is below 1.0, a minor bump (0.3 -> 0.4) leaves its range: bump `range` here when that happens.
 
 ## Where the code lives

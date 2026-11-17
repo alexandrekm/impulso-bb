@@ -130,6 +130,27 @@
           "range": "^0.2.0"
         }
       }
+    },
+    {
+      "id": "goal",
+      "displayName": "Goal",
+      "description": "Keeps one durable objective on a thread and re-prompts it when idle until the agent reports completion with evidence or a repeated external blocker.",
+      "icon": "Target",
+      "tags": [
+        "goal",
+        "continuation",
+        "long-running"
+      ],
+      "author": {
+        "name": "KaviiSuri",
+        "github": "KaviiSuri"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/KaviiSuri/bb-plugin-goal.git",
+          "ref": "229f79eb193ae71b090fddab9f21e09562a0dcc9"
+        }
+      }
     }
   ]
 }
