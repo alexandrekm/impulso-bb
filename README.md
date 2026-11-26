@@ -4,6 +4,7 @@ A [bb](https://getbb.app) plugin marketplace. It holds only `marketplace.json`. 
 
 | Plugin | Source | Description |
 | --- | --- | --- |
+| opencode-go-usage | `bb-plugin-opencode-go-usage` | Machine-local OpenCode Go limits in the built-in Provider Usage card |
 | worktree-hooks | [`bb-plugin-worktree-hooks`](https://www.npmjs.com/package/bb-plugin-worktree-hooks) | Worktree environment that runs per-project scripts before and after the worktree is created, before the agent starts |
 | impulso-stats | [`bb-plugin-impulso-stats`](https://www.npmjs.com/package/bb-plugin-impulso-stats) | Pi usage summaries, session totals, and the complete Impulso dashboard inside bb |
 | plan-pin | [`bb-plugin-plan-pin`](https://www.npmjs.com/package/bb-plugin-plan-pin) | The agent's plan and the thread's source issue in two lines above the composer (needs impulso-pi's prompt rules) |
