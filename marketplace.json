@@ -6,6 +6,27 @@
   "description": "bb plugins by alexandrekm, installed from npm, plus reviewed third-party plugins pinned to a git commit.",
   "plugins": [
     {
+      "id": "opencode-go-usage",
+      "displayName": "OpenCode Go Usage",
+      "description": "OpenCode Go quota windows in the built-in bb Provider Usage card.",
+      "icon": "Gauge",
+      "tags": [
+        "usage",
+        "quota",
+        "opencode"
+      ],
+      "author": {
+        "name": "Alexandre Mendonça",
+        "github": "alexandrekm"
+      },
+      "source": {
+        "npm": {
+          "package": "bb-plugin-opencode-go-usage",
+          "range": "^0.1.0"
+        }
+      }
+    },
+    {
       "id": "worktree-hooks",
       "displayName": "Worktree Hooks",
       "description": "Run per-project scripts before and after a thread's git worktree is created, before the agent starts.",
